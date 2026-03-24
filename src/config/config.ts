@@ -29,6 +29,14 @@ export const config = {
     sync: {
         intervalSeconds: parseInt(process.env.SYNC_INTERVAL_SECONDS || '60'),
     },
+    externalApi: {
+        baseUrl: process.env.EXTERNAL_API_BASE_URL || 'http://localhost:4578',
+        email: process.env.EXTERNAL_API_EMAIL || 'admin@uvoice.com',
+        password: process.env.EXTERNAL_API_PASSWORD || 'Admin@123456',
+        authLoginPath: process.env.EXTERNAL_API_AUTH_LOGIN_PATH || '/api/v1/auth/login',
+        authRefreshPath: process.env.EXTERNAL_API_AUTH_REFRESH_PATH || '/api/v1/auth/refresh',
+        audiosPath: process.env.EXTERNAL_API_AUDIOS_PATH || '/api/v1/audios',
+    },
 };
 
 // Simple validation
